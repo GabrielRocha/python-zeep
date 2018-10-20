@@ -197,6 +197,7 @@ class Element(Base):
             elm = etree.SubElement(parent, self.qname)
             elm.set(xsi_ns('nil'), 'true')
             return
+
         if hasattr(value, '__values__'):
             for key, item in value.__values__.items():
                 if item:
